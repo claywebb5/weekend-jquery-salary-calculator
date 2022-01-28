@@ -1,3 +1,20 @@
 body {
-    background-color: aqua;
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    background-color: lightslategray;
+    text-align: center;
+}
+header h1 {
+    margin: 0;
+}
+h2 {
+    margin-left: 15px;
+}
+.inputFields {
+    margin: 10px;
+}
+.submitButton {
+    margin-left: 10px;
 }
