@@ -3,18 +3,25 @@ body {
     padding: 0;
 }
 h1 {
-    background-color: lightslategray;
+    background-color: gray;
     text-align: center;
+    color: whitesmoke;
+    
 }
 header h1 {
     margin: 0;
+    height: 50px;
 }
 h2 {
     margin-left: 15px;
+    margin-bottom: 10px;
 }
 .inputFields {
     margin: 10px;
+    display: inline-block;
+    width: 100%;
 }
 .submitButton {
-    margin-left: 10px;
+    margin-right: 10px;
+    float: right;
 }
