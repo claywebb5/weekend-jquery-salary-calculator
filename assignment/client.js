@@ -39,7 +39,11 @@ function addEmployee(){
 } // End addEmployee function
 
 function displayEmp() {
-
+    let el = $('#theEmpList'); // This will create a local variable that targets the output ID
+    el.empty();
+    for(let emp of employees){
+        el.append(`<li>` + emp.first + ` ` + emp.last + `, ID: ` + emp.id + `, Title: ` + emp.title + `, Salary: ` + emp.salary + `</li>`);
+    };
 } // End displayEmp function
 
 // MONTHLY TOTAL IS DIVIDE BY 12
