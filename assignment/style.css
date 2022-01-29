@@ -25,3 +25,10 @@ h2 {
     margin-right: 10px;
     float: right;
 }
+table, th, td {
+    border: 1px solid black
+
+}
+table {
+    width: 100%;
+}
