@@ -36,12 +36,14 @@ function addEmployee(){
     $('#annualSalaryField').val('');
     $('.submitButton').on('click', displayEmp);
     displayEmp();
+    return true;
 } // End addEmployee function
 
 function displayEmp() {
     console.log('In displayEmp');
+    $('#theEmpList').empty();
     for (let emp of employees){
-        $('#theEmpList').append(`<tr><td>${emp.first}</td><td>${emp.last}</td><td>${emp.id}</td><td>${emp.title}</td><td>${emp.salary}</td></tr>`);
+        $('#theEmpList').append(`<tr><td>${emp.first}</td><td>${emp.last}</td><td>${emp.id}</td><td>${emp.title}</td><td>${emp.salary}</td><td><button>${'Delete'}</button></td></tr>`);
     }; // End for of loop
     
 
