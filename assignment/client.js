@@ -7,9 +7,9 @@ function newEmployee (fNameInput, lNameInput, idInput, titleInput, salaryInput) 
     const newEmpObject = {
         first: fNameInput,
         last: lNameInput,
-        id: idInput,
+        id: Number(idInput),
         title: titleInput,
-        salary: salaryInput
+        salary: Number(salaryInput)
     };
     employees.push(newEmpObject); // This will push the newEmpObject values into the global employees array
     return true;
