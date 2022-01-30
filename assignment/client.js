@@ -19,6 +19,7 @@ function newEmployee (fNameInput, lNameInput, idInput, titleInput, salaryInput) 
 function readyNow() {
     console.log('jQuery is working');
     $('.submitButton').on('click', addEmployee);
+    
     // $('.submitButton').on('click', monthlyTotal);
 } // End readyNow function
 
@@ -46,10 +47,10 @@ function displayEmp() {
     monTotal = 0;
     $('#theEmpList').empty();
     for (let emp of employees){
-        $('#theEmpList').append(`<tr><td>${emp.first}</td><td>${emp.last}</td><td>${emp.id}</td><td>${emp.title}</td><td>${emp.salary}</td><td><button>${'Delete'}</button></td></tr>`);
+        $('#theEmpList').append(`<tr><td>${emp.first}</td><td>${emp.last}</td><td>${emp.id}</td><td>${emp.title}</td><td>${emp.salary}</td><td><button id="theDeleteButton">${'Delete'}</button></td></tr>`);
         monthlyTotal(emp.salary);
     }; // End for of loop
-    
+    $('#theEmpList').on('click', '#theDeleteButton', deleteButton);
 } // End displayEmp function
 
 function monthlyTotal(salary){
@@ -62,6 +63,15 @@ function monthlyTotal(salary){
     // return monTotal;
     console.log('In monthlyTotal:', monTotal);
 }
-// MONTHLY TOTAL IS DIVIDE BY 12
 
-// console.log('In monthlyTotal:', monTotal);
+function deleteButton(){
+    console.log('this is:', $(this));
+    $(this).parents("tr").remove();
+    
+} // End deleteButton function
+
+function capMonthlyTotal(){
+    console.log('Monthly Total Cap Reached!');
+
+    
+} // End capMonthlyTotal function
