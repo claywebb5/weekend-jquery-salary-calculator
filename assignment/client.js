@@ -41,16 +41,22 @@ function addEmployee(){
     $('#annualSalaryField').val('');
     // $('.submitButton').on('click', displayEmp);
     
+    monTotal = 0;
+    // $('#theEmpList').empty();
+    $('#theEmpList').append(`<tr><td>${first}</td><td>${last}</td><td>${id}</td><td>${title}</td><td>${salary}</td><td><button id="theDeleteButton">${'Delete'}</button></td></tr>`);
+    monthlyTotal(salary);
+
+
     return true;
 } // End addEmployee function
 
 function displayEmp(obj) {
     
     console.log('In displayEmp');
-    monTotal = 0;
-    $('#theEmpList').empty();
-    $('#theEmpList').append(`<tr><td>${obj.first}</td><td>${obj.last}</td><td>${obj.id}</td><td>${obj.title}</td><td>${obj.salary}</td><td><button id="theDeleteButton">${'Delete'}</button></td></tr>`);
-        monthlyTotal(obj.salary);
+    // monTotal = 0;
+    // $('#theEmpList').empty();
+    // $('#theEmpList').append(`<tr><td>${obj.first}</td><td>${obj.last}</td><td>${obj.id}</td><td>${obj.title}</td><td>${obj.salary}</td><td><button id="theDeleteButton">${'Delete'}</button></td></tr>`);
+    //     monthlyTotal(obj.salary);
     // for (let emp of employees){
     //     $('#theEmpList').append(`<tr><td>${emp.first}</td><td>${emp.last}</td><td>${emp.id}</td><td>${emp.title}</td><td>${emp.salary}</td><td><button id="theDeleteButton">${'Delete'}</button></td></tr>`);
     //     monthlyTotal(emp.salary);
