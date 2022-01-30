@@ -61,7 +61,7 @@ function displayEmp(obj) {
     //     $('#theEmpList').append(`<tr><td>${emp.first}</td><td>${emp.last}</td><td>${emp.id}</td><td>${emp.title}</td><td>${emp.salary}</td><td><button id="theDeleteButton">${'Delete'}</button></td></tr>`);
     //     monthlyTotal(emp.salary);
     // }; // End for of loop
-    $('#theEmpList').on('click', '#theDeleteButton', deleteButton);
+    $('#theDeleteButton').on('click', deleteButton);
 } // End displayEmp function
 
 function monthlyTotal(salary){
